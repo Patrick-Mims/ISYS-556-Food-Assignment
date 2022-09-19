@@ -1,16 +1,28 @@
-//
-//  ContentView.swift
-//  Shared
-//
-//  Created by Patrick Kevin Mims on 9/18/22.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @State private var imageName = "pizza"
+    @State private var priceLabel = "Pizza : $12.99"
+    
     var body: some View {
-        Text("Hello, world!")
+        VStack {
+            Image(imageName)
+                .resizable()
+                .scaledToFit()
+                .imageScale(.large)
+                .foregroundColor(.orange)
+                .padding()
+            
+            Text(priceLabel)
+                .font(.title).fontWeight(.heavy).foregroundColor(.orange).italic()
+            
+            Button("Next Dish") {
+                imageName = imageName
+                priceLabel = priceLabel
+            }
+            .font(.title)
             .padding()
+        }
     }
 }
 
