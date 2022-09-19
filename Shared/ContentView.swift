@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var imageName = "pizza"
+    @State private var imageName = "burger"
     @State private var priceLabel = "Pizza : $12.99"
     
     var body: some View {
